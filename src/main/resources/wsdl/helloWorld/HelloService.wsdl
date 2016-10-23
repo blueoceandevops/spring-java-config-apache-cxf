@@ -1,43 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                  xmlns:tns="http://www.teknocrat.com/WebServiceOne/"
-                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="WebServiceOne"
-                  targetNamespace="http://www.teknocrat.com/WebServiceOne/">
+                  xmlns:tns="http://www.woudstra.nl/HelloWorldService/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="HelloWorldService"
+                  targetNamespace="http://www.woudstra.nl/HelloWorldService/">
     <wsdl:types>
 
-        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.teknocrat.com/WebServiceOne/">
-            <xsd:element name="WebServiceOneOperation">
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.woudstra.nl/HelloWorldService/">
+            <xsd:element name="HelloWorldServiceOperation">
                 <xsd:complexType>
                     <xsd:sequence>
-
                         <xsd:element name="in" type="xsd:string"></xsd:element>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="WebServiceOneOperationResponse">
+            <xsd:element name="HelloWorldServiceOperationResponse">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="out" type="xsd:string"></xsd:element>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element></xsd:schema></wsdl:types>
-    <wsdl:message name="WebServiceOneOperationRequest">
-        <wsdl:part name="parameters" element="tns:WebServiceOneOperation"></wsdl:part>
+    <wsdl:message name="HelloWorldServiceOperationRequest">
+        <wsdl:part name="parameters" element="tns:HelloWorldServiceOperation"></wsdl:part>
     </wsdl:message>
-    <wsdl:message name="WebServiceOneOperationResponse">
-        <wsdl:part name="parameters" element="tns:WebServiceOneOperationResponse"></wsdl:part>
+    <wsdl:message name="HelloWorldServiceOperationResponse">
+        <wsdl:part name="parameters" element="tns:HelloWorldServiceOperationResponse"></wsdl:part>
     </wsdl:message>
-    <wsdl:portType name="WebServiceOnePortType">
-        <wsdl:operation name="WebServiceOneOperation">
-            <wsdl:input message="tns:WebServiceOneOperationRequest"></wsdl:input>
-            <wsdl:output message="tns:WebServiceOneOperationResponse"></wsdl:output>
+    <wsdl:portType name="HelloWorldServicePortType">
+        <wsdl:operation name="HelloWorldServiceOperation">
+            <wsdl:input message="tns:HelloWorldServiceOperationRequest"></wsdl:input>
+            <wsdl:output message="tns:HelloWorldServiceOperationResponse"></wsdl:output>
         </wsdl:operation>
     </wsdl:portType>
-    <wsdl:binding name="WebServiceOneBinding" type="tns:WebServiceOnePortType">
+    <wsdl:binding name="HelloWorldServiceBinding" type="tns:HelloWorldServicePortType">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-        <wsdl:operation name="WebServiceOneOperation">
-            <soap:operation soapAction="http://www.teknocrat.com/WebServiceOne/WebServiceOneOperation" />
+        <wsdl:operation name="HelloWorldServiceOperation">
+            <soap:operation soapAction="http://www.woudstra.nl/HelloWorldService/HelloWorldServiceOperation" />
             <wsdl:input>
                 <soap:body use="literal" />
             </wsdl:input>
@@ -46,9 +45,9 @@
             </wsdl:output>
         </wsdl:operation>
     </wsdl:binding>
-    <wsdl:service name="WebServiceOne">
-        <wsdl:port name="WebServiceOnePort" binding="tns:WebServiceOneBinding">
-            <soap:address location="http://www.teknocrat.com/" />
+    <wsdl:service name="HelloWorldService">
+        <wsdl:port name="HelloWorldServicePort" binding="tns:HelloWorldServiceBinding">
+            <soap:address location="http://www.woudstra.nl/" />
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

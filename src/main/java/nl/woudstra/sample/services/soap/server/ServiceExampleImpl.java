@@ -1,6 +1,7 @@
 package nl.woudstra.sample.services.soap.server;
 
-import com.teknocrat.webserviceone.WebServiceOnePortType;
+
+import nl.woudstra.helloworldservice.HelloWorldServicePortType;
 import nl.woudstra.sample.database.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,13 +11,15 @@ import javax.jws.WebParam;
 /**
  * Created by bouke on 23-10-16.
  */
+
 @javax.jws.WebService(
-        serviceName = "WebServiceOne",
-        portName = "WebServiceOnePort",
-        targetNamespace = "http://www.teknocrat.com/WebServiceOne/",
-        endpointInterface = "com.teknocrat.webserviceone.WebServiceOnePortType")
+        serviceName = "HelloWorldService",
+        portName = "HelloWorldServicePort",
+        targetNamespace = "http://www.woudstra.nl/HelloWorldService/",
+        wsdlLocation = "classpath:/wsdl/helloWorld/HelloService.wsdl",
+        endpointInterface = "nl.woudstra.helloworldservice.HelloWorldServicePortType")
 @Service
-public class ServiceExampleImpl implements WebServiceOnePortType {
+public class ServiceExampleImpl implements HelloWorldServicePortType {
 
     private MessageRepository repository;
 
@@ -26,7 +29,7 @@ public class ServiceExampleImpl implements WebServiceOnePortType {
     }
 
     @Override
-    public String webServiceOneOperation(@WebParam(name = "in", targetNamespace = "") String in) {
+    public String helloWorldServiceOperation(@WebParam(name = "in", targetNamespace = "") String in) {
         return repository.getMessage();
     }
 }
