@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 
 /**
+ * The xml import is needed otherwise the Bus can not be assigned with autowiring
  * Created by bouke on 23-10-16.
  */
 @Configuration

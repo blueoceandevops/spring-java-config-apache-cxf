@@ -23,6 +23,11 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <!--
+        Start CXFServlet for initializing the services. It somehow seems to require an xml file for starting.
+        Provide it with an empty xml instead: zerobeans.xml. The real configuration is already loaded by the
+        ContextLoaderListener.
+    -->
     <servlet>
         <servlet-name>CXFServlet</servlet-name>
         <display-name>CXF Servlet</display-name>
@@ -30,8 +35,7 @@
         <load-on-startup>1</load-on-startup>
         <init-param>
             <param-name>config-location</param-name>
-            <!--<param-value>/WEB-INF/beans.xml</param-value>-->
-            <param-value></param-value>
+            <param-value>/WEB-INF/zerobeans.xml</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
@@ -39,6 +43,10 @@
         <url-pattern>/services/*</url-pattern>
     </servlet-mapping>
 
+    <!--
+        Start Spring Dispatcher servlet for all other requests. Use an empty contextConfigLocation since
+        the configuration is already loaded by the ContextLoaderListener
+    -->
     <servlet>
         <servlet-name>spring-dispatcher-servlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
