@@ -30,6 +30,6 @@ public class ServiceExampleImpl implements HelloWorldServicePortType {
 
     @Override
     public String helloWorldServiceOperation(@WebParam(name = "in", targetNamespace = "") String in) {
-        return repository.getMessage();
+        return repository.getMessage() + " from " + in;
     }
 }

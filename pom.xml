@@ -111,6 +111,7 @@
                                     <wsdlLocation>classpath:/wsdl/helloWorld/HelloService.wsdl</wsdlLocation>
                                     <extraargs>
                                         <extraarg>-impl</extraarg>
+                                        <extraarg>-client</extraarg>
                                         <extraarg>-verbose</extraarg>
                                     </extraargs>
                                 </wsdlOption>

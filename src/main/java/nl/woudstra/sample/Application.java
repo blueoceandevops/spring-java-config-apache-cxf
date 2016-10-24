@@ -14,12 +14,11 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * This class loads the main application context for Spring
- * This class delegates the real work by using the import option for loading specific configurations
+ * The component scan finds the other configuration classes automatically
  * Created by bouke on 23-10-16.
  */
 @Configuration
 @ComponentScan
-@Import({SoapConfig.class, WebConfig.class})
 public class Application {
 
 }

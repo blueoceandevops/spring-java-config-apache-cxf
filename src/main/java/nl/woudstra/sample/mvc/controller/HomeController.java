@@ -1,5 +1,6 @@
 package nl.woudstra.sample.mvc.controller;
 
+import nl.woudstra.sample.services.soap.client.ClientExampleImpl;
 import nl.woudstra.sample.services.soap.server.ServiceExampleImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,15 +16,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 
     private ServiceExampleImpl serviceExample;
+    private ClientExampleImpl clientExample;
 
     @Autowired
-    public HomeController(ServiceExampleImpl serviceExample){
+    public HomeController(ServiceExampleImpl serviceExample, ClientExampleImpl clientExample){
         this.serviceExample = serviceExample;
+        this.clientExample = clientExample;
     }
 
     @GetMapping
     public String showMessageFromService(ModelMap model){
-        model.addAttribute("message", serviceExample.helloWorldServiceOperation("Some random String"));
+        // First get the message from the service directly (no SOAP involved)
+        model.addAttribute("messageServer", serviceExample.helloWorldServiceOperation("server"));
+
+        // Then get the message through the SOAP protocol
+        model.addAttribute("messageClient", clientExample.getMessage("client"));
         return "home";
     }
 }
