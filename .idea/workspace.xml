@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb52511e-5877-4ec9-8345-b4420e8ed82d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/nl/woudstra/sample/services/soap/client/ClientExampleImpl.java" afterPath="$PROJECT_DIR$/src/main/java/nl/woudstra/sample/services/soap/client/ClientExampleImpl.java" />
     </list>
     <ignored path="services-webapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +36,8 @@
       <file leaf-file-name="ClientExampleImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/woudstra/sample/services/soap/client/ClientExampleImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+            <state relative-caret-position="60">
+              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,8 +119,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/java/nl/woudstra/sample/services/soap/server/ServiceExampleImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/woudstra/sample/mvc/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/woudstra/sample/services/soap/client/ClientExampleImpl.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/woudstra/sample/services/soap/client/ClientExampleImpl.java" />
       </list>
     </option>
   </component>
@@ -1034,8 +1034,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/woudstra/sample/services/soap/client/ClientExampleImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+        <state relative-caret-position="60">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,12 +1,8 @@
 package nl.woudstra.sample.services.soap.client;
 
-import nl.woudstra.helloworldservice.HelloWorldService;
 import nl.woudstra.helloworldservice.HelloWorldServicePortType;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.springframework.stereotype.Service;
-
-import javax.xml.namespace.QName;
-import java.net.URL;
 
 /**
  * Created by bouke on 24-10-16.
